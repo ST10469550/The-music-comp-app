@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <?xml version="1.0" encoding="utf-8"?>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/displayTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.781"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <TextView
+                android:id="@+id/tvSong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SONG TITLE"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.015"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.154" />
+
+            <EditText
+                android:id="@+id/songTitleEditText"
+                android:layout_width="253dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="44dp"
+                android:hint="(e.g, Super Man)"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/tvSong"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="144dp"
+                android:text="ARTIST NAME"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.016"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/artistNameEditText"
+                android:layout_width="238dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="120dp"
+                android:hint="(e.g, DJ Black Coffee)"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/tvArtist"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="212dp"
+                android:text="RATING"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/ratingEditText"
+                android:layout_width="296dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="184dp"
+                android:hint="(1-5)"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/tvRating"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="276dp"
+                android:text="COMMENTS"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/commentsEditText"
+                android:layout_width="266dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="244dp"
+                android:hint="(e.g, Memories)"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toEndOf="@id/tvComment"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/displayTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Please enter the details for the playlist, above."
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/addButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="12dp"/>
+
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="ADD"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/play_list_button"
+            app:layout_constraintBottom_toTopOf="@+id/exitButton"
+            android:layout_margin="8dp" />
+
+
+        <Button
+            android:id="@+id/play_list_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="PLAYLIST"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toEndOf="@id/addButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/exitButton"
+            android:layout_margin="8dp" />
+
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="EXIT"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
